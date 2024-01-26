@@ -18,21 +18,18 @@ namespace PatchApplicatoin
         private void btnCreateXML_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
-            doc.LoadXml("<studentList>" +
-
-                "<student>" +
-                "<studentno>1</studentno>" +
-                "<studentname>cain</studentname>" +
-                "<studentsurname>kazimoglu</studentsurname>" +
-                "</student>" +
-
-                "<student>" +
-                "<studentno>2</studentno>" +
-                "<studentname>mark</studentname>" +
-                "<studentsurname>Oliver</studentsurname>" +
-                "</student>" +
-
-                "</studentList>"
+            doc.LoadXml("<studentList>"
+                + "<student>"
+                + "<studentno>1</studentno>"
+                + "<studentname>cain</studentname>"
+                + "<studentsurname>kazimoglu</studentsurname>"
+                + "</student>"
+                + "<student>"
+                + "<studentno>2</studentno>"
+                + "<studentname>mark</studentname>"
+                + "<studentsurname>Oliver</studentsurname>"
+                + "</student>"
+                + "</studentList>"
                 );
 
             //save the file

@@ -38,6 +38,7 @@
             // 
             // btnCreateXML
             // 
+            btnCreateXML.ForeColor = Color.Black;
             btnCreateXML.Location = new Point(20, 31);
             btnCreateXML.Name = "btnCreateXML";
             btnCreateXML.Size = new Size(140, 61);
@@ -48,10 +49,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.White;
             groupBox1.Controls.Add(listBox1);
             groupBox1.Controls.Add(openfile);
             groupBox1.Controls.Add(btnCreateXML);
             groupBox1.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.ForeColor = Color.Black;
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1082, 558);
@@ -71,11 +74,12 @@
             // 
             // openfile
             // 
+            openfile.ForeColor = Color.Black;
             openfile.Location = new Point(918, 31);
             openfile.Name = "openfile";
             openfile.Size = new Size(144, 61);
             openfile.TabIndex = 1;
-            openfile.Text = "Open Folder";
+            openfile.Text = "Patch";
             openfile.UseVisualStyleBackColor = true;
             openfile.Click += openfile_Click;
             // 
@@ -83,9 +87,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1106, 582);
             Controls.Add(groupBox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
