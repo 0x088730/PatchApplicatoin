@@ -33,6 +33,7 @@
             groupBox1 = new GroupBox();
             listBox1 = new ListBox();
             openfile = new Button();
+            btnEsc = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             btnCreateXML.ForeColor = Color.Black;
             btnCreateXML.Location = new Point(20, 31);
             btnCreateXML.Name = "btnCreateXML";
-            btnCreateXML.Size = new Size(140, 61);
+            btnCreateXML.Size = new Size(140, 44);
             btnCreateXML.TabIndex = 0;
             btnCreateXML.Text = "Create XML";
             btnCreateXML.UseVisualStyleBackColor = true;
@@ -55,9 +56,9 @@
             groupBox1.Controls.Add(btnCreateXML);
             groupBox1.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.Black;
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Location = new Point(12, 44);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1082, 558);
+            groupBox1.Size = new Size(1082, 526);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "XML Patching Features";
@@ -67,9 +68,9 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 24;
-            listBox1.Location = new Point(20, 130);
+            listBox1.Location = new Point(20, 82);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1042, 412);
+            listBox1.Size = new Size(1042, 436);
             listBox1.TabIndex = 2;
             // 
             // openfile
@@ -77,11 +78,21 @@
             openfile.ForeColor = Color.Black;
             openfile.Location = new Point(918, 31);
             openfile.Name = "openfile";
-            openfile.Size = new Size(144, 61);
+            openfile.Size = new Size(144, 44);
             openfile.TabIndex = 1;
             openfile.Text = "Patch";
             openfile.UseVisualStyleBackColor = true;
             openfile.Click += openfile_Click;
+            // 
+            // btnEsc
+            // 
+            btnEsc.Location = new Point(1064, 18);
+            btnEsc.Name = "btnEsc";
+            btnEsc.Size = new Size(30, 23);
+            btnEsc.TabIndex = 2;
+            btnEsc.Text = "X";
+            btnEsc.UseVisualStyleBackColor = true;
+            btnEsc.Click += btnEsc_Click;
             // 
             // Form1
             // 
@@ -89,6 +100,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1106, 582);
+            Controls.Add(btnEsc);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -107,5 +119,6 @@
         private GroupBox groupBox1;
         private ListBox listBox1;
         private Button openfile;
+        private Button btnEsc;
     }
 }
