@@ -79,5 +79,50 @@ namespace PatchApplicatoin
         {
             Application.Exit();
         }
+
+        private void openXMLfile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.Filter = "XML Files|*.xml";
+            openFileDialog1.Title = "Select an XML File";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog1.FileName;
+                try
+                {
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.Load(selectedFile);
+
+                    // Now you can access the XML content and perform further operations
+                    // For example, you can access the root node of the XML document
+                    XmlNode root = xmlDoc.DocumentElement;
+
+                    // You can then iterate through the XML nodes and process the content as needed
+                    // For example, you can access specific elements or attributes
+
+                    // Example: Get the value of a specific node
+                    XmlNode selectedNode = xmlDoc.SelectSingleNode("/RootNode/ChildNode");
+                    if (selectedNode != null)
+                    {
+                        string nodeValue = selectedNode.InnerText;
+                        // Use nodeValue as needed
+                    }
+                    else
+                    {
+                        MessageBox.Show("The specified node does not exist in the XML document.");
+                    }
+
+                    // Example: Display the XML content in a textbox
+                    textBox1.Text = xmlDoc.InnerXml;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            
+            }
+        }
     }
 }

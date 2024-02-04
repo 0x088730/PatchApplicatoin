@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnCreateXML = new Button();
             groupBox1 = new GroupBox();
+            openXMLfile = new Button();
             listBox1 = new ListBox();
             openfile = new Button();
             btnEsc = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            textBox1 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,6 +54,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.White;
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(openXMLfile);
             groupBox1.Controls.Add(listBox1);
             groupBox1.Controls.Add(openfile);
             groupBox1.Controls.Add(btnCreateXML);
@@ -64,13 +69,23 @@
             groupBox1.Text = "XML Patching Features";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // openXMLfile
+            // 
+            openXMLfile.Location = new Point(453, 31);
+            openXMLfile.Name = "openXMLfile";
+            openXMLfile.Size = new Size(203, 44);
+            openXMLfile.TabIndex = 3;
+            openXMLfile.Text = "Open XML file";
+            openXMLfile.UseVisualStyleBackColor = true;
+            openXMLfile.Click += openXMLfile_Click;
+            // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 24;
             listBox1.Location = new Point(20, 82);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1042, 436);
+            listBox1.Size = new Size(1042, 148);
             listBox1.TabIndex = 2;
             // 
             // openfile
@@ -94,6 +109,13 @@
             btnEsc.UseVisualStyleBackColor = true;
             btnEsc.Click += btnEsc_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(20, 245);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(1042, 32);
+            textBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -110,6 +132,7 @@
             Text = "Game Patcher";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -120,5 +143,8 @@
         private ListBox listBox1;
         private Button openfile;
         private Button btnEsc;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button openXMLfile;
+        private TextBox textBox1;
     }
 }
