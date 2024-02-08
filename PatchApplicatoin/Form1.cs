@@ -111,7 +111,7 @@ namespace PatchApplicatoin
                     }
                     else
                     {
-                        MessageBox.Show("The specified node does not exist in the XML document.");
+                        MessageBox.Show("The specified node does not exist in the XML document elementation.");
                     }
 
                     // Example: Display the XML content in a textbox
